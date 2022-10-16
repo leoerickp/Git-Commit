@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+.menu {
+    border-top: 5px solid #67e8f9;
+}
+
+.logo {
+    width: 60px;
+    height: 50px;
+}
+
+.logo-name {
+    width: 141.15px;
+    height: 50px;
+}
+
+body {
+    background-image: url('/img/img4.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.slideshow-wrapper {
+    width: 300%;
+    /* Change the animation settings */
+    animation: slideshow 20s infinite;
+}
+
+@keyframes slideshow {
+    0% {
+        left: 0;
+    }
+
+    11% {
+        left: 0;
+    }
+
+    22.5% {
+        left: -100%;
+    }
+
+    38% {
+        left: -100%;
+    }
+
+    45% {
+        left: -200%;
+    }
+
+    56% {
+        left: -200%;
+    }
+
+    67% {
+        left: -100%;
+    }
+
+    78% {
+        left: -100%;
+    }
+
+    89% {
+        left: 0%;
+    }
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+}
+
+.card-header {
+    height: 108px;
+}
+
+.button-esp {
+    background: #06B6D4;
+    border-radius: 8px;
+}
+
+li a {
+    padding: 5px;
+    font-weight: 700;
+    border-radius: 15px;
+    transition: 200ms all;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+li a:hover {
+    color: #cffafe;
+    background-color: #0e7490;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    border-bottom: 2px solid #cffafe;
+    border-left: 2px solid #cffafe;
+    border-right: 2px solid #cffafe;
+    border-radius: 15px;
+    transition: 300ms all;
+}
+
+.logo-name a:hover span:hover {
+    color: #164e63;
+    transition: 300ms all;
+}
