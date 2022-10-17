@@ -12,25 +12,24 @@ class Card_Commit_H_comp extends Component {
 
         return (
             <div
-                className="card flex flex-col columns-3 bg-cyan-200 shadow-md rounded-md border border-cyan-300 border-solid">
-                <div className="flex flex-row gap-2 card-header bg-cyan-400 rounded-t-md p-2 border-b border-cyan-900 border-solid">
+                className="flex flex-col gap-1 bg-cyan-200  shadow-none hover:shadow-lg rounded-md border border-cyan-300 border-solid w-full ">
+                <div className="flex flex-row gap-1 bg-cyan-400 rounded-t-md p-2 border-b border-cyan-900 border-solid w-full">
                     <img src={this.props.commit.commiter_avatar_url} className="avatar" alt="avatar" />
                     <div>
-                        <p><strong>Committer:</strong> <span>{this.props.commit.committer.name}</span></p>
-                        <p><strong>Date:</strong> <span>{moment(this.props.commit.committer.date).utc().format('YYYY-MM-DD')}</span></p>
+                        <strong>Committer:</strong> <span>{this.props.commit.committer.name} | </span>
+                        <strong>Date:</strong><span>{moment(this.props.commit.committer.date).utc().format('YYYY-MM-DD')} | </span>
+                        <strong>Email:</strong> <span>{this.props.commit.committer.email} </span>
+                        <strong>| Url:</strong><a href={this.props.commit.commiter_html_url} target="_blank" className="rows-1">{this.props.commit.committer.name}</a>
+                        <p><strong>Message:</strong> {this.props.commit.message}</p>
                     </div>
                 </div>
-                <div className="flex flex-col h-full p-2">
-                    <strong>Message:</strong>
-                    <p className="rows-1">{this.props.commit.message}</p>
-                    <p className="text-right"><a href={this.props.commit.commiter_html_url} target="_blank" className="rows-1">Url de {this.props.commit.committer.name}</a></p>
+                <div className="p-2">
+                    <p>
+                        <strong>Author:</strong> <span>{this.props.commit.author.name} | </span>
+                        <strong>Url:</strong> <a href={this.props.commit.author_html_url} target="_blank" >{this.props.commit.author.name}</a>
+                    </p>
+                </div>
 
-                    <p><strong>Author:</strong> <span>{this.props.commit.author.name}</span></p>
-                    <p><strong>Url:</strong> <a href={this.props.commit.author_html_url} target="_blank" >{this.props.commit.author.name}</a></p>
-                </div>
-                <div className="bottom-10 p-1 text-center">
-                    <button className="button-esp px-8 py-2 text-cyan-50" onClick={this.goDetail}>Details</button>
-                </div>
             </div >
         );
     }
