@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import Card_Commit from './card_commit';
+import Card_Commit_H from './card_commit_h';
 import Global from "../Global";
-class Card_Commit_List extends Component {
 
+class Commits extends Component {
     state = { commits: [] };
     componentDidMount(): void {
-        axios.get(Global.url + 'git-commits/last')
+        axios.get(Global.url + 'git-commits/all')
             .then((res) => {
                 //console.log(Global.url, res.data);
                 this.setState({
@@ -21,7 +21,7 @@ class Card_Commit_List extends Component {
         if (this.state.commits) {
             const commitsList = this.state.commits.map((commit, key) => {
                 return (
-                    < Card_Commit key={key} commit={commit} />
+                    < Card_Commit_H key={key} commit={commit} />
                 );
             });
             return (
@@ -30,7 +30,12 @@ class Card_Commit_List extends Component {
                 </div>
             );
         }
+        return (
+            <div className="flex flex-col h-screen m-0">
+
+            </div>
+        )
     }
 }
 
-export default Card_Commit_List;
+export default Commits;

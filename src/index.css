@@ -25,6 +25,7 @@ body {
     background-image: url('/img/img4.jpg');
     background-attachment: fixed;
     background-size: cover;
+    color: #164e63;
 }
 
 
@@ -86,8 +87,14 @@ body {
     border-radius: 8px;
 }
 
+.button-esp:hover {
+    background: #0891b2;
+}
+
 li a {
-    padding: 5px;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
     font-weight: 700;
     border-radius: 15px;
     transition: 200ms all;
@@ -106,7 +113,24 @@ li a:hover {
     transition: 300ms all;
 }
 
+.active {
+    color: #a5f3fc;
+    background-color: #0891b2;
+    border-bottom: 1px solid #0e7490;
+    border-left: 1px solid #0e7490;
+    border-right: 1px solid #0e7490;
+
+}
+
 .logo-name a:hover span:hover {
     color: #164e63;
     transition: 300ms all;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 900px;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

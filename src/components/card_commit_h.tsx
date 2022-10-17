@@ -3,7 +3,7 @@ import moment from "moment";
 import { useNavigate } from 'react-router-dom';
 
 
-class Card_Commit_comp extends Component {
+class Card_Commit_H_comp extends Component {
     goDetail = () => {
         const { commit } = this.props;
         this.props.navigate('/detail', { state: { commit } });
@@ -35,10 +35,10 @@ class Card_Commit_comp extends Component {
         );
     }
 }
-function Card_Commit(props) {
+function Card_Commit_H(props) {
     let navigate = useNavigate();
-    return (<Card_Commit_comp {...props} navigate={navigate} />);
+    return (<Card_Commit_H_comp {...props} navigate={navigate} />);
 }
 
 
-export default Card_Commit;
+export default Card_Commit_H;

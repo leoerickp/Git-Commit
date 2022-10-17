@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/img/Octocat.png";
 
 class Header extends Component {
@@ -8,24 +9,24 @@ class Header extends Component {
                 className="flex flex-row flex-wrap text-center justify-center md:justify-between md:items-center w-full h-20 bg-cyan-500 text-cyan-50 drop-shadow-md menu px-52">
 
                 <div className="columns-2 p-0 logo-name">
-                    <a href="#">
+                    <a href="/" >
                         <img src={logo} alt="logo" className="logo" />
                         <span className="text-cyan-100 drop-shadow-md font-bold">HitHub Commits</span>
                     </a>
                 </div>
-                <div className="flex flex-row p-0 ">
+                <div className="flex flex-row p-0">
                     <ul className="flex flex-row h-full w-96 px-2 justify-between">
                         <li>
-                            <a href="#">Home</a>
+                            <NavLink to="/" activeclassname="active" >Home</NavLink>
                         </li>
                         <li>
-                            <a href="#">Commits</a>
+                            <NavLink to="/commits" activeclassname="active-link">Commits</NavLink>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <NavLink to="/contact" activeclassname="active-link">Contact</NavLink>
                         </li>
                         <li>
-                            <a href="#">Surprise</a>
+                            <NavLink to="/surprise" activeclassname="active-link">Surprise</NavLink>
                         </li>
                     </ul>
                 </div>
