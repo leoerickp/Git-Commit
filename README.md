@@ -33,8 +33,6 @@ const Global = {
 export default Global;
 ```
 ---------------
-## ¿Cómo luce?
-
 ## Autor
 * [Leo Erick Pereyra](https://github.com/leoerickp).
 ## Licencia
