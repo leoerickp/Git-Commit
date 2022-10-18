@@ -5,6 +5,7 @@ import Contact from "./contact";
 import Home from "./home";
 import Surprise from "./surprise";
 import Detail from './detail';
+import Error from "./error404";
 
 
 class Router extends Component {
@@ -20,6 +21,7 @@ class Router extends Component {
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/surprise" element={<Surprise />} />
                         <Route path="/detail" element={<Detail />} />
+                        <Route path="*" element={<Error />} />
                     </Routes>
                 </div>
             </div >

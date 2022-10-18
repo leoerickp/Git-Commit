@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import axios from 'axios';
 import Global from "../Global";
 import SimpleReactValidator from "simple-react-validator";
+import swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 
-
-class Contact extends Component {
+class Contact_comp extends Component {
     public emailRef = React.createRef();
     public msgRef = React.createRef();
     public validator = null;
@@ -36,12 +37,22 @@ class Contact extends Component {
     sendMessage = (e) => {
         e.preventDefault();
         this.changeState();
-        //console.log(this.state.message);
+
         axios.post(Global.url + 'sendmail', this.state.message)
             .then(res => {
                 const { msg } = res.data;
                 if (msg == 'success') {
-                    alert('The message was sent successfully!')
+                    swal.fire({
+                        title: 'Your message was sent successfully!',
+                        icon: 'success',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    });
+                    this.props.navigate('/');
                 }
             })
             .catch(err => {
@@ -53,7 +64,7 @@ class Contact extends Component {
     render(): React.ReactNode {
         const message = this.state.message;
         return (
-            <div className="flex justify-center items-center bg-cyan-200 shadow-lg border-2 p-2 border-cyan-300 rounded-md">
+            <div className="flex relative justify-center items-center bg-cyan-200 shadow-lg border-2 p-2 border-cyan-300 rounded-md">
                 <form className="w-3/6" onSubmit={this.sendMessage}>
                     <div className="flex flex-col gap-1 ">
                         <label htmlFor="email" className="block text-md font-medium text-cyan-900">Email</label>
@@ -70,6 +81,11 @@ class Contact extends Component {
             </div>
         );
     }
+}
+
+function Contact(props) {
+    let navigate = useNavigate();
+    return (<Contact_comp {...props} navigate={navigate} />);
 }
 
 export default Contact;
