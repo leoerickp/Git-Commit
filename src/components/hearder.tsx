@@ -6,7 +6,7 @@ class Header extends Component {
     render(): React.ReactNode {
         return (
             <header id=" header"
-                className="flex flex-row flex-wrap text-center justify-center md:justify-between md:items-center w-full h-20 bg-cyan-500 text-cyan-50 drop-shadow-md menu px-52">
+                className="flex flex-row fixed top-0 flex-wrap text-center justify-center md:justify-between md:items-center w-full h-20 bg-cyan-500 text-cyan-50 drop-shadow-lg menu px-52">
 
                 <div className="columns-2 p-0 logo-name">
                     <a href="/" >

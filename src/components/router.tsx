@@ -11,7 +11,7 @@ import Error from "./error404";
 class Router extends Component {
     render(): React.ReactNode {
         return (
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mt-20">
                 <div className="clear-both float-none"></div>
                 <div className="container md p-5 bg-cyan-100 text-tahiti pt-2 w-9/12 mb-16">
                     <Routes>
