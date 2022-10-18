@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import Card_Commit from './card_commit';
 import Global from "../Global";
+
 class Card_Commit_List extends Component {
 
     state = { commits: [] };
