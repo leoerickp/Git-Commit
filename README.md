@@ -33,6 +33,12 @@ const Global = {
 export default Global;
 ```
 ---------------
+## Ejecución
+_Dentro de la carpeta donde se clonó el proyecto:_
+* Ejecutar como desarrollador:
+```console
+npm run dev
+```
 ## Autor
 * [Leo Erick Pereyra](https://github.com/leoerickp).
 ## Licencia
