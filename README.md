@@ -1,11 +1,11 @@
 # Git Commit
-### English: 
+### English: You can see a [version with React/Hooks](https://github.com/leoerickp/Git-Commit2.git)
 This website is intended for a technical test that demonstrates React knowledge. It makes requests to an API server. It has 3 main modules:
 * Home: Shows the last three commits.
 * Commit: Show all commits.
 * Contact: Allows you to send a message to an email address configured in the API server.
 
-### Español:
+### Español: Puedes ver la [versión con React/Hooks](https://github.com/leoerickp/Git-Commit2.git)
 Este sitio web está destinado a una prueba técnica por la cual se demuestra conocimientos sobre React. El mismo realiza peticiones a un servidor API. Se tiene 3 módulos principales:
 * Home: Muestra los tres últimos commit.
 * Commit: Muestra todos los commits.
